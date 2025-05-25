@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lost and Found</title>
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+    }
+.container {
+    width: 60%;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #333;
+}
+
+.sort-options {
+    margin-bottom: 20px;
+}
+
+.sort-options a {
+    text-decoration: none;
+    color:black;
+    font-weight: bold;
+}
+.sort-options .active {
+    
+    color: black;
+}
+
+.item {
+    background: #fff;
+    padding: 15px;
+    border: 1px solid #ddd;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+
+.item h3 {
+    margin: 0;
+    color: #333;
+}
+
+.item p {
+    margin: 5px 0;
+    color: #555;
+}
+
+.owner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+     
+}
+
+.owner span {
+    font-weight: bold;
+}
+
+button {
+    background-color: #0d0d0d;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Lost Items: 5 results found </h2>
+        <div class="sort-options">
+            <p style="color: black;" >SORT BY: Date Added | Found Date</p>
+        </div>
+
+        <div class="item">
+            <h3>Item Name: Java programming book</h3>
+            <p><span style="color: black;">Date Added: 05/08/2107 |  Date Lost : 08/05/2017 </span> </p>
+            <span style="color: black;">Book</span> 
+            <div class="owner">
+                <p style="color: black;" >Name: Harkamal Kaur</p>  
+                <button >Details</button>
+           </div>
+             
+        </div>
+
+        <div class="item">
+            <h3>Item Name: Moto G 2014</h3>
+            <p style="color: black;"> Date Added:  05/05/2017 |  Date Lost:  03/05/2017</p>
+            <p style="color: black;">Black model. Has a broken screen.</p>
+            <div class="owner">
+                <p style="color: black;">Name: Jose Diaz</p>
+                <button>Details</button>
+            </div>
+        </div>
+
+        <div class="item">
+            <h3>Item Name: Sunlight glasses</h3>
+            <p style="color: black;"> Date Added: 05/05/2017 |  Date Lost: 05/05/2017</p>
+            <p style="color: black;">White stripes on the sides.</p>
+            <div class="owner">
+                <p style="color: black;">Name: Jose Daniel Diaz</p>
+                <button>Details</button>
+            </div>
+        </div>
+
+        <div class="item">
+            <h3>Item Name: Gold Watch</h3>
+            <p style="color: black;"> Date Added:  -- | Date Lost: 08/08/2008</p>
+            <div class="owner">
+                <p style="color: black;">Name: Abbas</p>
+                <button>Details</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
