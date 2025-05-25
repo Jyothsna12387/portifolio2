@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+      <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+       display:flex;
+       background-color: rgb(167, 159, 174);
+       justify-content: center;
+       align-items: center;
+       height:100vh;
+        }
+     .slider{
+        width:500px;
+        height:300px;
+        position: relative;
+        margin-bottom: 200px;
+     }
+     .slider img{
+        width:100%;
+        object-fit: cover;
+        border-color: rgb(180, 176, 174);
+     }
+     .left{
+         position:absolute;
+         left:0px;
+         top:60%;
+         z-index:20;
+         margin-left: 10px;
+         background-color: rgb(235, 225, 225);
+         padding-left: 15px;
+         padding-top: 9px;
+         height:40px;
+         width:40px;
+         cursor: pointer;
+     }
+     .left-arrow{
+        color:aliceblue;
+      font-size: 30px;
+     }
+     .right{
+         position:absolute;
+         right:0px;
+         top:60%;
+          z-index:20;
+         background-color: rgb(236, 226, 226);
+         margin-right:10px;
+         padding-left: 12px;
+         padding-top: 9px;
+         height:40px;
+         width:40px;
+         cursor: pointer;
+     }
+     .right-arrow{
+        color:aliceblue;
+       font-size: 30px;
+     }
+      </style>
+    </head>
+    <body>
+        <div class="slider">
+            <div class="left">
+             <i class="fa-solid fa-chevron-left" class="left-arrow"></i>
+            </div>
+            <img src="images/login page.jpg" alt="no image" id="img">
+            <div class="right">
+                 <i class="fa-solid fa-chevron-right" class="right-arrow"></i>
+            </div>
+        </div>
+<script>
+    var image=['home page.jpg','login page.jpg','choice page.jpg','report lost.jpg','found items.png'];
+    let len=image.length;
+    let img=document.getElementById('img');
+    let leftarr=document.querySelector('.left');
+    let rightarr=document.querySelector('.right');
+    let imgindex=1;
+    leftarr.onclick=function(){
+        imgindex-=1;
+        if(imgindex==0)
+    {
+        leftarr.style.display='none';
+    }
+    else{
+        leftarr.style.display='block';
+    }
+        img.setAttribute('src','images/'+image[imgindex]);
+        if(imgindex<len)
+    {
+        rightarr.style.display='block';
+    }
+    }
+    rightarr.onclick=function(){
+        imgindex+=1;
+        if(imgindex==len-1)
+    {
+        rightarr.style.display='none';
+    }
+    else{
+        rightarr.style.display='block';
+    }
+        img.setAttribute('src','images/'+image[imgindex]);
+        if(imgindex>=1)
+    {
+        leftarr.style.display='block';
+    }
+    }
+    </script>
+    </body>
+</html>
+
+
+ 

@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <meta charset="UTF-8">
+      <meta lang="eng" content="width=device-width">
+        <title>My Portifolio</title>
+        <link rel="stylesheet" href="image slider.html">
+        <style>
+         *{
+            margin: 0;
+            padding:0;
+            box-sizing: border-box;
+         }
+         body{
+                color:white;
+                 background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRySnic3z8DWxJBtiGFTdr3o-ci30xSij5yfnAoMsF3mJWpszpXRTxvAbRJzFQ9ntidPK8&usqp=CAU');
+                 overflow-x:hidden;
+                  overflow-y:scroll;
+             }
+          .image img{
+             display: block;
+            border-radius: 50%;
+           width: 280px;
+           height: 280px;
+           object-fit: cover;
+            border: 8px solid transparent;
+        }
+        .image{
+         position: relative;
+         display: inline-block;
+         border-radius: 50%;
+         padding: 6px;  
+         background: linear-gradient(90deg, #ff004f,#ff7300, #fffb00, #48ff00, #18e3c1, #004cff, #7a00ff, #ff00c8, #ff004f);
+    background-size: 800% 800%;
+            animation: borderColors 12s linear infinite;
+        }
+      .image::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    padding: 8px;
+    -webkit-mask:linear-gradient(#fff 0 0) content-box, 
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: destination-out;
+    mask-composite: exclude;
+    pointer-events: none;
+  }
+
+  @keyframes borderColors {
+    0% {
+      background-position: 0% 50%;
+    }
+    100% {
+      border:10px;
+      background-position: 500% 70%;
+    }
+  }
+           header {
+                color:aliceblue;
+                height:80px;
+               /* background-color:rgba(0,90,50,0.5);
+                background-color: #455296;*/
+                position: sticky;
+                margin-top: 20px;
+                margin-bottom: 40px;
+                margin-right: 50px;
+            }
+            header .logo{
+               margin-top: 0px;
+               text-align: left;
+               width:90000px;
+               height:100px;
+               margin-left: 30px;
+               margin-top: 0px;
+            }
+             header nav a{
+                color:aliceblue;
+                word-spacing: 30px;
+                text-align: right;
+                text-decoration: none;
+                font-size: 20px; 
+             }
+             header nav{
+                text-align: right;
+                word-spacing: 30px;
+                padding-right: 40px;
+                padding-top:20px;
+             }
+             header nav a:hover{
+                color:rgb(71, 183, 231);
+                padding:10px;
+             }
+            .image{
+                height:300px;
+                width:300px;
+                float:right;
+               border-radius: 50%;
+               border: 5px solid rgba(2, 128, 21, 0.719);
+                margin-top: 70px;
+                margin-left: 10px;
+                margin-right: 120px;
+             }
+              
+             .profile{
+                /*background-color:rgb(15, 15, 108);*/
+                height:500px;
+                margin-top:0px;
+                margin-top: 90px;
+                margin-bottom: 0;
+             }
+             .profile h4{
+                padding-top:120px;
+                padding-left: 120px;
+                padding-bottom: 0;
+                font-size: 15px;
+                margin-bottom: 0;
+                color:blue;
+             }
+             .profile p{
+                 padding-left: 120px;
+                 padding-top: 0px;
+                 margin-bottom: 0;
+                 margin-top: 10px;
+                font-size: 50px;
+                 
+             }
+             .profile h5{
+                padding-left: 120px;
+                 padding-top: 0px;
+                 margin-bottom: 0;
+                 margin-top: 5px;
+             }
+              .profile .p{
+               font-size: 20px;
+               color:#97a4e8;
+               font-style: italic;
+              }
+              .skills {
+               display:flex;
+               margin-right: 50px;
+               justify-content: space-around;
+               margin-top: 70px;
+               text-decoration: none;
+               }
+               .technical{
+                  background-color: rgba(13, 55, 57, 0.491);
+                  text-decoration: none;
+                  width:400px;
+                  height:200px;
+                  margin-left: 50px;
+                  font-style: italic;
+                  padding-left: 30px;
+                  text-decoration: none;
+               }
+               .technical li{
+                   text-decoration: none;
+                  padding-left: 30px;
+               }
+               .technical:hover{
+                  width:450px;
+                  cursor: pointer;
+                  height:200px;
+                  font-size: 20px;
+               }
+               .web{
+                  background-color:rgba(13, 55, 57, 0.491);
+                  text-decoration:none;
+                  width:400px;
+                  padding-left: 30px;
+                  font-style: italic;
+               }
+               .web:hover{
+                  width:450px;
+                  cursor: pointer;
+                  height:200px;
+                  font-size: 20px;
+               }
+            .h{
+               text-align: center;
+               font-size: 30px;
+               margin-top: 150px;
+               text-transform:uppercase;
+              color:rgb(96, 181, 214);
+               font-size: 40px;
+            }
+            .img{
+               margin-top: 30px;
+               margin-left: 70px;
+               margin-right: 60px;
+               display:flex;
+               justify-content: space-between;
+               word-spacing: 30px;
+            }
+            .p{
+               font-size: 20px;
+               margin-left: 60px;
+            }
+            table{
+               margin-top: 50px;
+               margin-bottom: 70px;
+            }
+            table,th,tr,td{
+               border:2px solid rgb(99, 221, 37);
+               margin-left: 190px;
+               margin-right: 150px;
+               border-collapse: collapse;
+               padding: 10px;
+               font-size: 20px;
+               text-align: center;
+            }
+            .links{
+               display:flex;
+               flex-direction:row;
+               gap: 20px;
+               padding: 20px;
+               display: inline-flex;
+               margin-bottom: 0px;
+               margin-top: 40px;
+            }
+            .profile .links .li{
+               height:50px;
+               border-radius: 80%;
+               margin-left: 200px;
+               margin-top: 10px;
+               margin-right: 0px;
+               /*border:5px solid #00ffff;*/
+               color:#00ffff;
+               background-color: transparent;
+               font-size: 20px;
+               transition: background-color 0.3s, color 0.3s;
+               filter:brightness(0) saturate(100%) invert(64%) sepia(83%) saturate(457%) hue-rotate(154deg) brightness(103%) contrast(101%),
+            }
+             .profile .links .li:hover{
+               background-color:#00ffff;
+               color:#00ffff;
+               cursor: pointer;
+             }
+            .profile .links .in{
+                height:35px;
+               border-radius: 50%;
+               margin-left: 15px;
+               margin-top: 19px;
+               margin-right: 0px;
+               /*border:5px solid #00ffff;*/
+               color:#00ffff;
+               background-color: transparent;
+               font-size: 20px;
+               transition: background-color 0.3s, color 0.3s;
+            }
+            .profile .links .in:hover{
+               background-color: #00ffff;
+               color:#00ffff; 
+               cursor: pointer;
+            }
+            .profile .links .gi{
+                height:39px;
+               border-radius: 80%;
+               margin-left: 10px;
+               margin-top: 15px;
+               margin-right: 0px;
+              /* border:5px solid #00ffff;*/
+               color:#00ffff;
+               background-color: transparent;
+               font-size: 20px;
+               transition: background-color 0.3s, color 0.3s;
+            }
+            .profile .links .gi:hover{
+               background-color: #00ffff;
+               color:#00ffff; 
+               cursor: pointer;
+            }
+             .btn{
+               background-color: #00ffcc;
+               padding:8px;
+               height:50px;
+               width:170px;
+               font-size: 19px;
+               font-style:italic;
+               text-align: center;
+               color:#cc0033;
+               border: 3px solid transparent;
+               box-shadow: 3px 5px 10px rgba(198, 7, 7, 0.5);
+                margin-left: 200px;
+                margin-top: 30px;
+                margin-right: 40px;
+                text-decoration: none;
+                border-radius: 20px;
+                font-family: cursive;
+                animation:glow 2s linear infinite;
+                cursor: pointer;
+            }
+            @keyframes glow{
+               0%{
+                  box-shadow: 0 0 5px #00ffcc,0 0 10px #00ffcc,0 0 15px #cc0ccf;
+               }
+                50%{
+                  box-shadow: 0 0 10px #00ffcc,0 0 20px #a608c6 ;
+               }
+              100%{
+                  box-shadow: 0 0 5px #00ffcc,0 0 10px #cf09b8,0 0 15px #00ffcc;
+               }
+            }
+            .btn:hover{
+               cursor: pointer;
+               background-color: rgb(94,214,94);
+            }
+            .container{
+               display:flex;
+               flex-direction: column;
+            }
+            
+ .image-row {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 70px;
+    margin-left: 50px;
+    margin-right: 40px;
+  }
+  .image-card {
+    width: 270px;
+    height: 300px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.7);
+    transition: transform 0.3s ease;
+    background: #444;
+    cursor: pointer;
+  }
+  .image-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  
+  .image-card:hover {
+    transform: rotateY(24deg) scale(1.1);
+    /*width:300px;*/
+    box-shadow: 0 20px 30px rgba(255,255,255,0.3);
+  }
+   .contact-container {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    max-width: 480px;
+    width: 100%;
+    padding: 30px 40px;
+     margin-left: 35%;
+     color:white;
+     margin-top: 30px;
+     background-color:rgba(28, 83, 86, 0.491); 
+  }
+  button {
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    background: #3350d4;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 12px rgba(102,126,234,0.5);
+  }
+  button:hover{
+   background-color: #004cff;
+   cursor: pointer;
+  }
+  .contact-container h2 {
+    margin-bottom: 24px;
+    margin-top: 20px;
+    font-weight: 600;
+    color: #c4b5b5;
+    font-size: 40px;
+    font-style: italic;
+    text-align: center;
+  }
+ form {
+    display: flex;
+    flex-direction: column;
+    }
+
+  label {
+    margin-bottom: 6px;
+    font-weight: 500;
+    color: #fdeaea;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    padding: 12px 14px;
+    margin-bottom: 18px;
+    border: 1.8px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+    resize: vertical;
+  }
+
+  input[type="text"]:focus,
+  input[type="email"]:focus,
+  textarea:focus {
+    border-color: #667eea;
+    outline: none;
+  }
+
+  textarea {
+    min-height: 100px;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  footer{
+   height:50px;
+   padding: 10px;
+   background-color: #19224b;
+   color:#e7d7d7;
+   text-align: center;
+   font-size: 20px;
+   margin-top: 40px;
+   margin-bottom: 2px;
+  }
+</style>  
+    </head>
+    <body>
+        <header>
+            <nav>
+                <a href="#">Home</a>
+                <a href="#">about</a>
+                <a href="#">skills</a>
+                <a href="#">projects</a>
+                <a href="#">certifications</a>
+                <a href="#">contact</a>
+            </nav>
+            <div class="logo">
+               <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZfU4yK2HBThvpqMY5K6Kmnkbgnp-u34tw4ALb4VUt-DTysm6RosBVPn39_m8OGhcQqxU&usqp=CAU" alt="no image" height="30px" width="60px">
+            </div>
+        </header> 
+
+     <div class="profile">
+      <img class="image" src="images/jyo.jpg" alt="no image">
+      <p style="font-size:40px;">Hi,I am  <span style="color:rgb(87, 198, 245); font-weight: 900; font-size: 50px;"> Jyothsna</span></p>
+      <h5>Web Developer</h5>
+       <p class="p">Being an 2/4 IT student,Aspiring <strong>front-end </strong>web developer with a passion for creating 
+                responsive,visually appealing and user-friendly websites. Eager to apply design principles and technical 
+                skills to real-world projects,while continously learning and evolving in a fast-paced development environment.</p>
+                 <div class="container">
+                <div class="links">
+                  <a href="https://www.linkedin.com/in/guttu-jyothsna-a397082a7/" target="_blank">
+                  <img src="https://img.freepik.com/premium-photo/linkedin-logo-with-3d-render-frosted-glass-material-subtle-glow-professional-blue-color-scheme-isol_1020495-693387.jpg?semt=ais_hybrid&w=740" class="li">
+                </a>
+                <a href="https://github.com/Jyothsna12387" target="_blank">
+                  <img src="https://tse3.mm.bing.net/th?id=OIP.uFQ1PSCHEiZumopVHGufEQHaHa&pid=Api&P=0&h=180" class="gi">
+                  </a>
+                  <a href="https://www.instagram.com/jyothsna2989/" target="_blank">
+                  <img src="http://1000logos.net/wp-content/uploads/2017/02/New-Instagram-logo.jpg" class="in">
+                  </a>
+                </div>
+                  <a class="btn" href= "images\resume.pdf" target="_blank">Download my CV</a>
+                 </div>
+     </div>
+
+<h2 style="text-align: center; color:rgb(96, 181, 214);font-size: 50px; margin-top: 40px;margin-bottom: 50px;">SKILLS</h2>
+     <div class="skills">
+      <div class="technical">
+         <h3 style="padding-top: 20px; text-align: center; margin-bottom: 20px;font-size: 30px;color:#667eea">Technical Skills</h3>
+         <ul>
+         <li>C</li>
+         <li>Java</li>
+         <LI>Python</LI>
+         <li>Data structures</li>
+         </ul>
+     </div>
+      <div class="web" >
+         <h3 style="padding-top: 20px; text-align: center;margin-bottom: 20px;font-size: 30px;
+               color:#667eea">Web Development Skills</h3>
+         <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>Javascript</li>
+            <li>Basics in Django Framework</li>
+         </ul>
+      </div>
+     </div>
+  
+     <h2 class="h">CERTIFICATIONS</h2>
+      <div class="image-row">
+    <div class="image-card">
+      <img src="images/aiml.jpg" alt="no image" />
+    </div>
+    <div class="image-card">
+      <img src="images/codesoft.jpg" alt="no image"/>
+    </div>
+    <div class="image-card">
+      <img src="images/iconcoderz.jpg" alt="no image" />
+    </div>
+    <div class="image-card">
+      <img src="images/java.jpg" alt=" no image" />
+    </div>
+    <div class="image-card">
+      <img src="images/flipkart.jpg" alt="no image" />
+    </div>
+  </div>
+      <div class="projects">
+         <h2 style="text-align: center; color:rgb(96, 181, 214);font-size: 40px; margin-top: 130px; margin-bottom: 50px;">PROJECTS</h2>
+         <table width="70%">
+            <thead>
+            <tr height="30px">
+               <th>Project</th>
+               <th>Description</th>
+               <th>Link</th>
+            </tr>
+            </thead>
+            <tr height="30px">
+               <td>SRKR Lost and Found Hub</td>
+               <td>A website we can recover our lost items</td>
+               <td><a href="image slider.html" style="color:white; text-decoration: none;" target="_blank">&#128073 Click here</a></td>
+            </tr>
+         </table>
+      </div>
+
+       <h2 style="text-align: center; color:rgb(96, 181, 214);font-size: 40px; margin-top: 130px;">CONTACT </h2>
+      <div class="contact">
+          <div class="contact-container">
+    <h2>Contact Me</h2>
+    <form action="#" method="post" novalidate>
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" placeholder="Your full name" required />
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="your.email@example.com" required />
+
+      <label for="subject">Subject</label>
+      <input type="text" id="subject" name="subject" placeholder="Subject of your message" required />
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" placeholder="Write your message here..." required></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+<footer>&copy; 2025 Guttu Jyothsna | All Rights Reserved</footer>
+</body>
+</html>
